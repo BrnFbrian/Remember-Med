@@ -5,24 +5,46 @@
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+// Main Colors
+export const MainColors = {
+  teal: '#20C9C9',
+  lightBlueBase: '#07BEC8',
+  lightBlueLight: '#10E3EE',
+  darkBlueBase: '#334FDC',
+  darkBlueLight: '#6E83EC',
+};
+
+// Grayscale
+export const Grayscale = {
+  gray100: '#17222B',
+  gray200: '#293C4C',
+  gray300: '#4D708F',
+  gray400: '#A2B9CD',
+  gray500: '#CAD7E2',
+  gray600: '#D7E1EA',
+  gray700: '#E8EEF3',
+  gray800: '#F8FAFB',
+};
+
+const tintColorLight = MainColors.darkBlueBase;
+const tintColorDark = MainColors.darkBlueLight;
 
 export const Colors = {
   light: {
-    text: '#11181C',
+    text: Grayscale.gray100,
     background: '#fff',
+    white: '#FFFFFF',
     tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
+    icon: Grayscale.gray300,
+    tabIconDefault: Grayscale.gray400,
     tabIconSelected: tintColorLight,
   },
   dark: {
-    text: '#ECEDEE',
-    background: '#151718',
+    text: Grayscale.gray800,
+    background: Grayscale.gray100,
     tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
+    icon: Grayscale.gray400,
+    tabIconDefault: Grayscale.gray400,
     tabIconSelected: tintColorDark,
   },
 };
